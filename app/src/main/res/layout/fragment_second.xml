@@ -6,30 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/previous"
-            app:layout_constraintBottom_toTopOf="@id/textview_second"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
-        <TextView
-            android:id="@+id/textview_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem_ipsum"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_second" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="65dp"
+                    android:layout_toStartOf="@+id/username"
+                    android:text="Hello,"
+                    android:textSize="26dp"
+                    android:textColor="@color/cream"
+                    android:layout_marginTop="120dp"/>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="110dp"
+                    android:text="Bitna Putri"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cream"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginBottom="40dp"/>
+
+                <TextView
+                    android:id="@+id/koin"
+                    android:layout_below="@id/username"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="250dp"
+                    android:layout_height="62dp"
+                    android:background="@drawable/shape_card"
+                    android:hint="160"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/fab_margin"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/koin"
+                    android:layout_alignTop="@+id/koin"
+                    android:layout_alignEnd="@+id/koin"
+                    android:layout_alignBottom="@+id/koin"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Kumpulkan Koin Hasjrat"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/cream"/>
+
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="345dp"
+                    android:layout_below="@id/koin"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:layout_marginBottom="10dp"
+                    android:horizontalSpacing="6dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="6dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/promotion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/card1"
+            android:layout_marginTop="@dimen/fab_margin"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Promotion"
+                    android:textSize="20dp"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/cream"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_below="@id/tv1"
+                    android:layout_width="350dp"
+                    android:layout_height="180dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:id="@+id/banner_promotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img"
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
 </androidx.core.widget.NestedScrollView>

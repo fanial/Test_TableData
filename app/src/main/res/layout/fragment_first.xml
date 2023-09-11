@@ -6,30 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HATOCA"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="48sp"
+            android:layout_marginTop="182dp"/>
+
+        <EditText
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="@string/email"
+            android:layout_marginTop="80dp"
+            android:textSize="16sp"
+            android:layout_below="@id/textView"/>
+
+        <EditText
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="@string/password"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_below="@id/tv_email"/>
+
         <Button
-            android:id="@+id/button_first"
+            android:id="@+id/button_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@id/textview_first"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_below="@id/tv_password"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/fingerprint"
+            android:background="@drawable/shape"
+            android:text="@string/login" />
+
+        <ImageButton
+            android:id="@+id/fingerprint"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tv_password"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/shape"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:src="@drawable/baseline_fingerprint_24"/>
 
         <TextView
-            android:id="@+id/textview_first"
+            android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem_ipsum"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_first" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_below="@id/button_login"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="250dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/btn_sign_up"
+            android:text="Don't have an account?" />
+
+        <TextView
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/red"
+            android:layout_marginBottom="250dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/button_login"
+            android:layout_marginEnd="100dp"
+            />
+
+    </RelativeLayout>
 </androidx.core.widget.NestedScrollView>
