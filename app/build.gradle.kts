@@ -36,6 +36,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    lint{
+        "contentDescription"
+        "HardcodedText"
+    }
 }
 
 dependencies {

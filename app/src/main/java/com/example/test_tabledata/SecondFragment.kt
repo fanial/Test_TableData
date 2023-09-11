@@ -1,13 +1,12 @@
 package com.example.test_tabledata
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
 import com.example.test_tabledata.adapter.MenuAdapter
 import com.example.test_tabledata.data.MenuDataClass
 import com.example.test_tabledata.databinding.FragmentSecondBinding
@@ -22,11 +21,11 @@ class SecondFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    lateinit var menuList: List<MenuDataClass>
+    private lateinit var menuList: List<MenuDataClass>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
 
@@ -35,7 +34,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        menuList = ArrayList<MenuDataClass>()
+        menuList = ArrayList()
         menuList = menuList + MenuDataClass("Lucky Draw", R.drawable.lucky_draw)
         menuList = menuList + MenuDataClass("Book Test Drive", R.drawable.book_test_drive)
         menuList = menuList + MenuDataClass("Book Service", R.drawable.book_service)

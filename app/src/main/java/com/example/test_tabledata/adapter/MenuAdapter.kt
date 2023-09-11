@@ -29,7 +29,7 @@ internal class MenuAdapter (
        return 0
     }
 
-    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View? {
+    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
         var convertView = p1
 
         if (layoutInflater == null){
@@ -42,10 +42,10 @@ internal class MenuAdapter (
         }
 
         menuImg = convertView!!.findViewById(R.id.image_menu)
-        menuTV = convertView!!.findViewById(R.id.tv_menu)
+        menuTV = convertView.findViewById(R.id.tv_menu)
 
-        menuImg.setImageResource(menuList.get(p0).img)
-        menuTV.setText(menuList.get(p0).name)
+        menuImg.setImageResource(menuList[p0].img)
+        menuTV.text = menuList[p0].name
 
         return convertView
     }

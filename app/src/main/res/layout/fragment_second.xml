@@ -22,30 +22,31 @@
                 android:background="@drawable/background">
 
                 <TextView
+                    android:id="@+id/hello"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="100dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="120dp"
                     android:layout_marginBottom="65dp"
-                    android:layout_toStartOf="@+id/username"
                     android:text="Hello,"
-                    android:textSize="26dp"
                     android:textColor="@color/cream"
-                    android:layout_marginTop="120dp"/>
+                    android:textSize="26dp" />
 
                 <TextView
                     android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="110dp"
-                    android:text="Bitna Putri"
-                    android:textSize="26dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/cream"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="120dp"
-                    android:layout_marginBottom="40dp"/>
+                    android:layout_marginEnd="110dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_toEndOf="@+id/hello"
+                    android:text="Bitna Putri"
+                    android:textColor="@color/cream"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/koin"
